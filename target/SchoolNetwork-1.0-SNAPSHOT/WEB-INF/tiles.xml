@@ -7,7 +7,7 @@
     <definition name="base.definition" template="/views/tiles/template.jsp">
         <put-attribute name="header" value="/views/tiles/header.jsp"/>
         <put-attribute name="footer" value="/views/tiles/footer.jsp"/>
-        <put-attribute name="title" value="library"/>
+        <put-attribute name="title" value="Schoolbook"/>
     </definition>
 
     <definition name="*-*-*" extends="base.definition">

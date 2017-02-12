@@ -8,10 +8,11 @@
 
     <security:http>
         <security:form-login login-page="/loginpage" login-processing-url="/loginprocesing"
-                             authentication-success-forward-url="/home"/>
+                             authentication-success-forward-url="/home" authentication-failure-forward-url="/failLogin"/>
 
         <security:intercept-url pattern="/" access="permitAll()"/>
-
+        <security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/admin/*" access="hasRole('ROLE_ADMIN')"/>
         <security:logout logout-url="/logout" logout-success-url="/"/>
 
     </security:http>

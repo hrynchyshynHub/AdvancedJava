@@ -1,2 +1,163 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<h1>Home</h1>
+<link rel="stylesheet" href="/css/carousel.css">
+<div class="navbar-wrapper" style="margin: 0">
+
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SchoolBook</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Стартова</a></li>
+                        <li><a href="#about">Про сайт</a></li>
+                        <li><a href="#contact">Контакти</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/loginpage">Увійти</a></li>
+                                <li><a href="#">Інша дія</a></li>
+                                <li><a href="#">Щось ще тут</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Навігаційний заголовок</li>
+                                <li><a href="#">Відокремлений лінк</a></li>
+                                <li><a href="#">Ще один відокремлений лінк</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="/images/1.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Приклад заголовка.</h1>
+                    <p>Зауваження: Якщо ви переглядаєте цю сторінку через <code>file://</code> URL, Glyphicon-кнопки "наступна" та "попередня", котрі розташовані праворуч та ліворуч, можуть не завантажуватись/відображатись правильно, що пов'язано з правилами безпеки веб-браузера.</p>
+                    <p><a class="btn btn-lg btn-primary" href="/registration" role="button">Зареєструватись сьогодні</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/images/2.jpg" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Інший приклад заголовка.</h1>
+                    <p>Це приклад вмісту. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Дізнатись більше</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/images/3.jpg" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Ще один заголовок.</h1>
+                    <p>Це приклад вмісту. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Продивитись галерею</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Попередня</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Наступна</span>
+    </a>
+</div><!-- /.carousel -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-circle" src="/images/1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h2>Заголовок</h2>
+            <p>Це приклад вмісту. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="#" role="button">Проглянути деталі &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="/images/1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h2>Заголовок</h2>
+            <p>Це приклад вмісту. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-default" href="#" role="button">Проглянути деталі &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img-circle" src="/images/1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h2>Заголовок</h2>
+            <p>Це приклад вмісту. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" role="button">Проглянути деталі &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Перший заголовок слайдів. <span class="text-muted">Тут щось ще.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="/images/2.jpg" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="/images/3.jpg" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading">О так! Це добре. <span class="text-muted">Дивіться самі.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">І тут щось останнє. <span class="text-muted">Шах і мат.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive" src="/images/1.jpg" alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
