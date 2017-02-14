@@ -1,14 +1,18 @@
 package ua.com.schoolnetwork.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ua.com.schoolnetwork.dao.UserDao;
+import ua.com.schoolnetwork.dto.DtoUtilMapper;
+import ua.com.schoolnetwork.dto.UserDto;
 import ua.com.schoolnetwork.entity.User;
 import ua.com.schoolnetwork.service.UserService;
 
+import java.security.Principal;
 import java.util.List;
 
 /**
@@ -39,6 +43,13 @@ public class UserController {
         model.addAttribute("fail", "fail");
 
         return "views-base-loginpage";
+    }
+    @RequestMapping(value = "/profile",method = RequestMethod.GET)
+    public String userProfile(Model model, Principal principal){
+        User user = userService.findOne(Integer.parseInt(principal.getName()));
+        UserDto userDto = DtoUtilMapper.userToUserDto(user);
+        model.addAttribute("user",userDto);
+        return "views-base-profile";
     }
 
 }

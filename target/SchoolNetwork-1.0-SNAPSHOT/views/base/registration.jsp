@@ -1,7 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <link rel="stylesheet" href="/css/loginpage.css">
-
+<style>
+    nav{
+        display: block;
+        margin: 0;
+        height: 70px;
+    }
+    </style>
 <div class="container">
     <form:form class="form-horizontal" modelAttribute="user" action="/saveUser" method="post">
         <div class="form-group">

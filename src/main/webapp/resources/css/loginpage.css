@@ -4,3 +4,6 @@
 body{
     background-color: #edeef0;
 }
+nav{
+    display: none;
+}

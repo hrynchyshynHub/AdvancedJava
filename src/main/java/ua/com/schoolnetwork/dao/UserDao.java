@@ -8,5 +8,5 @@ import ua.com.schoolnetwork.entity.User;
  */
 public interface UserDao extends JpaRepository<User,Integer> {
     User findByEmail(String email);
-    User findBySecondName(String secondName);
+
 }
