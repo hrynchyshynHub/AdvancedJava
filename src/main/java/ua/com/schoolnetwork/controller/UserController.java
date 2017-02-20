@@ -26,8 +26,13 @@ public class UserController {
     private BCryptPasswordEncoder encoder;
 
     @RequestMapping(value = "/saveUser", method = RequestMethod.POST)
-    public String save(@ModelAttribute User user){
-        userService.saveUser(user);
+    public String save(@ModelAttribute User user,Model model){
+        try {
+            userService.saveUser(user);
+        } catch (Exception e) {
+            model.addAttribute("exception", e.getMessage()+"!!");
+            return "views-base-registration";
+        }
         return "views-base-home";
     }
     @PostMapping("/failLogin")

@@ -5,7 +5,7 @@
     nav{
         display: block;
         margin: 0;
-        height: 70px;
+        height: 50px;
     }
     </style>
 <div class="container">
@@ -30,12 +30,14 @@
         </div>
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            ${exception}
             <div class="col-sm-4 col-xs-12">
                 <form:input type="email" class="form-control" path="email" id = "inputEmail3" placeholder="Email"/>
             </div>
         </div>
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+            ${exception}
             <div class="col-sm-4 col-xs-12">
                 <form:input type="password" class="form-control" id="inputPassword3" path="password" placeholder="Password"/>
             </div>

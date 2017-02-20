@@ -12,7 +12,7 @@ public class Comments{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @ManyToOne
-    private Image image;
+    private UserEvent userEvent;
     @ManyToOne
     private User user;
     private String comment;
@@ -29,12 +29,12 @@ public class Comments{
         this.id = id;
     }
 
-    public Image getImage() {
-        return image;
+    public UserEvent getUserEvent() {
+        return userEvent;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public void setUserEvent(UserEvent userEvent) {
+        this.userEvent = userEvent;
     }
 
     public User getUser() {

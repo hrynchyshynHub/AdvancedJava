@@ -26,7 +26,7 @@ public class User implements UserDetails {
     private String email;
     private String password;
     @OneToMany(mappedBy = "user")
-    private List<Image>images;
+    private List<UserEvent> userEvents;
     @OneToMany(mappedBy = "userFrom")
     private List<Message>inboxMessage;
     @OneToMany(mappedBy = "userTo")
@@ -72,9 +72,6 @@ public class User implements UserDetails {
         this.age = age;
     }
 
-    public List<Image> getImages() {
-        return images;
-    }
 
     public List<Message> getInboxMessage() {
         return inboxMessage;
@@ -100,8 +97,12 @@ public class User implements UserDetails {
         this.outboxMessage = outboxMessage;
     }
 
-    public void setImages(List<Image> images) {
-        this.images = images;
+    public List<UserEvent> getUserEvents() {
+        return userEvents;
+    }
+
+    public void setUserEvents(List<UserEvent> userEvents) {
+        this.userEvents = userEvents;
     }
 
     public String getStatus() {

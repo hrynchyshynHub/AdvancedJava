@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - advance@localhost [2]">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="advance">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="country"/>
+    <schema id="3" name="country1"/>
+    <schema id="4" name="information_schema"/>
+    <schema id="5" name="jdbc"/>
+    <schema id="6" name="library"/>
+    <schema id="7" name="mydatabase"/>
+    <schema id="8" name="mysql"/>
+    <schema id="9" name="op"/>
+    <schema id="10" name="performance_schema"/>
+    <schema id="11" name="person"/>
+    <schema id="12" name="sb"/>
+    <schema id="13" name="scgoolnetwork"/>
+    <schema id="14" name="school"/>
+    <schema id="15" name="school2"/>
+    <schema id="16" name="schoolbook"/>
+    <schema id="17" name="schoolnetwork"/>
+    <schema id="18" name="shop2"/>
+    <schema id="19" name="skills"/>
+    <schema id="20" name="spring"/>
+    <schema id="21" name="springmvc"/>
+    <schema id="22" name="test"/>
+    <schema id="23" name="user"/>
+    <table id="24" parent="1" name="comments"/>
+    <table id="25" parent="1" name="message"/>
+    <table id="26" parent="1" name="user"/>
+    <table id="27" parent="1" name="user_feed"/>
+    <table id="28" parent="1" name="user_user"/>
+    <column id="29" parent="24" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="30" parent="24" name="comment">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="31" parent="24" name="localDate">
+      <data-type>date|0</data-type>
+    </column>
+    <key id="32" parent="24" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="33" parent="25" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="34" parent="25" name="isReading">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="35" parent="25" name="localDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="36" parent="25" name="message">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="37" parent="25" name="userFrom_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="38" parent="25" name="userTo_id">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="39" parent="25" name="FKkgv0vapiknekuc85b2uev6y2c">
+      <columns>userFrom_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="40" parent="25" name="FKs7457iwb1ipfmu81tvjmtk5cq">
+      <columns>userTo_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="41" parent="25" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="42" parent="25" name="FKkgv0vapiknekuc85b2uev6y2c">
+      <columns>userFrom_id</columns>
+      <ref-key>~.user.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="43" parent="25" name="FKs7457iwb1ipfmu81tvjmtk5cq">
+      <columns>userTo_id</columns>
+      <ref-key>~.user.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="44" parent="26" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="45" parent="26" name="age">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="46" parent="26" name="city">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="47" parent="26" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="48" parent="26" name="firstName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="49" parent="26" name="isFriend">
+      <mandatory>1</mandatory>
+      <data-type>bit(1)|0</data-type>
+    </column>
+    <column id="50" parent="26" name="password">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="51" parent="26" name="phoneNumber">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="52" parent="26" name="role">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="53" parent="26" name="secondName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="54" parent="26" name="status">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="55" parent="26" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="56" parent="27" name="User_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="57" parent="27" name="feeds_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="58" parent="27" name="FKj79b6x46n1f1yq90xhog08nxh">
+      <columns>User_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="59" parent="27" name="UK_ooeviehvdme1v9umg9wagor45">
+      <columns>feeds_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="60" parent="27" name="UK_ooeviehvdme1v9umg9wagor45">
+      <columns>feeds_id</columns>
+      <underlying-index>UK_ooeviehvdme1v9umg9wagor45</underlying-index>
+    </key>
+    <foreign-key id="61" parent="27" name="FKj79b6x46n1f1yq90xhog08nxh">
+      <columns>User_id</columns>
+      <ref-key>~.user.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="62" parent="28" name="User_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="63" parent="28" name="friends_id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="64" parent="28" name="FKf41ur8bhykv2qqqpvsan2l7bs">
+      <columns>User_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="65" parent="28" name="FKkqs1wbvxrhxubyqpj62j9g2o4">
+      <columns>friends_id</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <foreign-key id="66" parent="28" name="FKf41ur8bhykv2qqqpvsan2l7bs">
+      <columns>User_id</columns>
+      <ref-key>~.user.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="67" parent="28" name="FKkqs1wbvxrhxubyqpj62j9g2o4">
+      <columns>friends_id</columns>
+      <ref-key>~.user.PRIMARY</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+  </database-model>
+</dataSource>
