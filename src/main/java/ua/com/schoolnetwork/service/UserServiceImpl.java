@@ -60,4 +60,16 @@ public class UserServiceImpl implements UserService,UserDetailsService{
     public User findByEmail(String email) {
         return userDao.findByEmail(email);
     }
+
+    @Override
+    public void changeUser(int id,User user) {
+        User user1 = userDao.findOne(id);
+        user1.setFirstName(user.getFirstName());
+        user1.setSecondName(user.getSecondName());
+        user1.setAge(user.getAge());
+        user1.setStatus(user.getStatus());
+        user1.setCity(user.getCity());
+        user1.setPhoneNumber(user.getPhoneNumber());
+        userDao.save(user1);
+    }
 }

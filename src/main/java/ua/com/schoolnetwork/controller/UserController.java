@@ -56,5 +56,16 @@ public class UserController {
         model.addAttribute("user",userDto);
         return "views-base-profile";
     }
+    @RequestMapping(value = "/edit",method = RequestMethod.GET)
+    public String editProfile(Principal principal,Model model){
+        User user = userService.findOne(Integer.parseInt(principal.getName()));
+        model.addAttribute("user", user);
+        return "views-base-editProfile";
+    }
+    @RequestMapping(value = "/saveChanged", method = RequestMethod.POST)
+    public String saveChanged(@ModelAttribute User user,Principal principal) {
+        userService.changeUser(Integer.parseInt(principal.getName()),user);
+        return "redirect:/profile";
+    }
 
 }

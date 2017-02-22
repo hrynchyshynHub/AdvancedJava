@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <div class="navbar-wrapper" style="margin: 0">
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
@@ -20,7 +21,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/loginpage">Увійти</a></li>
-                            <li><a href="/logout">Вийти</a></li>
+                            <sec:authorize access="hasRole('ROLE_USER')"><li><a href="/logout">Вийти</a></li></sec:authorize>
+                            <sec:authorize access="hasRole('ROLE_USER')"><li><a href="/edit">Редагувати<br>профіль</a></li></sec:authorize>
                             <li class="divider"></li>
                         </ul>
                     </li>

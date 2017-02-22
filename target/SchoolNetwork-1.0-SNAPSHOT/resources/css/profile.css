@@ -1,0 +1,18 @@
+.main-inf{
+    color: #344fff;
+    height: 300px;
+    border: 1px solid dodgerblue;
+    border-radius: 4px;
+    margin: 5px;
+    background: white;
+}
+#wall{
+    height: 1000px;
+    border: 1px solid #2e6da4;
+    border-radius: 4px;
+    margin: 5px;
+    background: white;
+}
+body{
+    background: #edeef0;
+}
