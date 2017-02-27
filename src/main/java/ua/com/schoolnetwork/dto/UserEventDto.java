@@ -10,12 +10,16 @@ public class UserEventDto {
     private String description;
     private LocalDate localDate;
     private int likeCounter;
+    private String firstName;
+    private String secondName;
 
-    public UserEventDto(int id,String description, LocalDate localDate, int likeCounter) {
+    public UserEventDto(int id, String description, LocalDate localDate, int likeCounter, String firstName, String secondName) {
         this.id = id;
         this.description = description;
         this.localDate = localDate;
         this.likeCounter = likeCounter;
+        this.firstName = firstName;
+        this.secondName = secondName;
     }
 
     public String getDescription() {
@@ -48,5 +52,21 @@ public class UserEventDto {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 }

@@ -7,7 +7,6 @@
     background: white;
 }
 #wall{
-    height: 1000px;
     border: 1px solid #2e6da4;
     border-radius: 4px;
     margin: 5px;
@@ -15,4 +14,41 @@
 }
 body{
     background: #edeef0;
+
+}
+a{
+    cursor: pointer;
+}
+h5{
+    font-weight: 800;
+}
+.news{
+    width: 500px;
+    border: 1px solid black;
+    padding: 10px  40px;
+
+}
+.comment-form{
+    margin-top:10px;
+}
+.avatar{
+    width: 50px;
+    float: left;
+    height: 400px;
+    margin: 5px;
+}
+.comment{
+    margin-top:15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.13);
+}
+.comment:last-child{
+    border: none;
+}
+.comments-wrapper{
+    padding:10px 0 ;
+    font-size:.9em;
+}
+.post-input{
+    margin-bottom: 20px;
 }
