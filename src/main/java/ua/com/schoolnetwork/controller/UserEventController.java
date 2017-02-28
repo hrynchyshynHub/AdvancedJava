@@ -36,10 +36,9 @@ public class UserEventController {
     }
     @RequestMapping(value = "/deleteUserEvent", method = RequestMethod.POST)
     public @ResponseBody
-    List<UserEventDto> deleteUserEvent(@RequestBody String index,Principal principal){
+   List<UserEventDto> deleteUserEvent(@RequestBody String index,Principal principal){
         userEventService.delete(Integer.parseInt(index));
         return DtoUtilMapper.userEventToUserEventsDto(userEventService.findAll(Integer.parseInt(principal.getName())));
-
     }
     @RequestMapping(value = "/likeUserEvent", method = RequestMethod.POST)
     public @ResponseBody
