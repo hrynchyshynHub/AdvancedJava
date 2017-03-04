@@ -11,6 +11,7 @@ public interface CommentService {
     Comments findOne(int id);
     List<Comments>findAll();
     void delete(int id);
-    void save(Comments comments);
+    void save(Comments comments,int idUser);
     List<Comments>findCommentsForEvent(int idEvent);
+
 }

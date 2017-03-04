@@ -12,14 +12,17 @@ public class UserEventDto {
     private int likeCounter;
     private String firstName;
     private String secondName;
+    private String pathToImage;
 
-    public UserEventDto(int id, String description, LocalDate localDate, int likeCounter, String firstName, String secondName) {
+    public UserEventDto(int id, String description, LocalDate localDate, int likeCounter, String firstName,
+                        String secondName,String path) {
         this.id = id;
         this.description = description;
         this.localDate = localDate;
         this.likeCounter = likeCounter;
         this.firstName = firstName;
         this.secondName = secondName;
+        this.pathToImage = path;
     }
 
     public String getDescription() {
@@ -68,5 +71,13 @@ public class UserEventDto {
 
     public void setSecondName(String secondName) {
         this.secondName = secondName;
+    }
+
+    public String getPathToImage() {
+        return pathToImage;
+    }
+
+    public void setPathToImage(String pathToImage) {
+        this.pathToImage = pathToImage;
     }
 }

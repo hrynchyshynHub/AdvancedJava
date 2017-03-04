@@ -42,13 +42,33 @@ function load(res) {
 </script>
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 main-inf">
-        <h3>${user.firstName} ${user.secondName}</h3>
-          <blockquote> ${user.status}</blockquote>
-            <h4>Live in ${user.city}</h4>
-            <h4>Has ${user.age} years old</h4>
-            <h4>Phone number: ${user.phoneNumber}</h4>
+        <div class="col-sm-3 col-lg-3 well text-center">
+            <div class="well">
+                <p><h4><a href="#">${user.firstName} ${user.secondName}</a></h4></p>
+                <img src="http://lorempixel.com/200/200" class="img-circle" height="200" width="200" alt="Avatar">
+            </div>
+            <div class="well">
+                <p><a href="#">Information</a></p>
+                <p>
+                    <table>
+                <tr><td><i class="fa fa-comment-o fa-1x" aria-hidden="true"></i></td><td> ${user.status}</td></tr>
+                <tr><td><i class="fa fa-home fa-1x" aria-hidden="true"></i></td><td> live in ${user.city}</td></tr>
+                <tr><td><i class="fa fa-phone fa-1x" aria-hidden="true"></i></td><td>     ${user.phoneNumber}</td></tr>
+                <tr><td><i class="fa fa-envelope fa-1x" aria-hidden="true"></i></td><td>${user.email}</td></tr>
+
+                    </table>
+                </p>
+            </div>
+            <div class="alert alert-success fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <p><strong>Ey!</strong></p>
+                People are looking at your profile. Find out who.
+            </div>
+            <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p>
+            <p><a href="#">Link</a></p>
         </div>
+
         <div class="col-lg-6" id = "wall">
             <div class="input-group post-input">
                 <textarea class="form-control custom-control" id = "text" rows="3" style="resize:none"></textarea>
@@ -58,6 +78,21 @@ function load(res) {
 
                 </div>
              </div>
+        <div class="col-sm-2 col-lg-2 well">
+            <div class="thumbnail">
+                <p>Upcoming Events:</p>
+                <img src="http://lorempixel.com/70/70" alt="Paris" width="400" height="300">
+                <p><strong>Paris</strong></p>
+                <p>Fri. 27 November 2015</p>
+                <button class="btn btn-primary">Info</button>
+            </div>
+            <div class="well">
+                <p>ADS</p>
+            </div>
+            <div class="well">
+                <p>ADS</p>
+            </div>
+        </div>
         </div>
       </div>
 
@@ -145,7 +180,7 @@ function load(res) {
                         '<div class="comment-form"> <div class="input-group"> ' +
                         '<input type="text" class="form-control"  id="comment-input" placeholder="Введіть коментар.." > ' +
                         '<div class="input-group-btn">'+
-                        '<a href="#" class="btn btn-success push-comment" onclick="add_comment()">+</a>'+
+                        '<a href="#" class="btn btn-success push-comment" onclick="comentEvent('+index+')">+</a>'+
                         '</div> </div> </div>'
 
                 $('#news').append(singleNews);
@@ -158,16 +193,18 @@ function load(res) {
 
     function comentEvent(index) {
         var Coments = {
-            comment: document.getElementById('commentInput').value
+            comment: document.getElementById('commentInput').value,
+            userEvent:{
+                id:index
+            }
         }
         $.ajax({
             url: 'saveComent?' + $('input[name=csrf_name]').val() + "=" + $('input[name=csrf_value]').val(),
             method: 'POST',
             contentType: 'application/json; charset=UTF-8',
             dataType: 'json',
-            data: JSON.stringify(Coments) +" "+ index,
+            data: JSON.stringify(Coments),
             success : function (res) {
-
             }
         })
     }

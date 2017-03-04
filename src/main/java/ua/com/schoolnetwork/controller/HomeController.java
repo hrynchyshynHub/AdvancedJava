@@ -37,4 +37,8 @@ public class HomeController {
         model.addAttribute("user",new User());
         return "views-base-registration";
     }
+    @RequestMapping(value = "/message", method = RequestMethod.GET)
+    public String message(){
+        return "views-base-message";
+    }
 }

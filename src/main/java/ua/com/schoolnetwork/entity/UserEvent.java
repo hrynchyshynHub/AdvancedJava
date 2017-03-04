@@ -16,6 +16,7 @@ public class UserEvent{
     private User user;
     private String description;
     private LocalDate localDate;
+    private String pathToImage;
     private int likeCounter;
     @OneToMany(mappedBy = "userEvent")
     List<Comments> commentses;
@@ -69,5 +70,13 @@ public class UserEvent{
 
     public void setCommentses(List<Comments> commentses) {
         this.commentses = commentses;
+    }
+
+    public String getPathToImage() {
+        return pathToImage;
+    }
+
+    public void setPathToImage(String pathToImage) {
+        this.pathToImage = pathToImage;
     }
 }

@@ -11,8 +11,10 @@ public class UserDto {
     private String status;
     private String city;
     private String phoneNumber;
+    private String email;
 
-    public UserDto(int id, String firstName, String secondName, int age, String status, String city, String phoneNumber) {
+    public UserDto(int id, String firstName, String secondName, int age, String status, String city, String phoneNumber,
+                   String email) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -20,6 +22,7 @@ public class UserDto {
         this.status = status;
         this.city = city;
         this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
     public int getId() {
@@ -76,5 +79,13 @@ public class UserDto {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
