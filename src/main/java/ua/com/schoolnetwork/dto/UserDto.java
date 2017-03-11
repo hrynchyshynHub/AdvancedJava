@@ -12,9 +12,9 @@ public class UserDto {
     private String city;
     private String phoneNumber;
     private String email;
+    private String pathToImage;
 
-    public UserDto(int id, String firstName, String secondName, int age, String status, String city, String phoneNumber,
-                   String email) {
+    public UserDto(int id, String firstName, String secondName, int age, String status, String city, String phoneNumber, String email, String pathToImage) {
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -23,6 +23,15 @@ public class UserDto {
         this.city = city;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.pathToImage = pathToImage;
+    }
+
+    public String getPathToImage() {
+        return pathToImage;
+    }
+
+    public void setPathToImage(String pathToImage) {
+        this.pathToImage = pathToImage;
     }
 
     public int getId() {

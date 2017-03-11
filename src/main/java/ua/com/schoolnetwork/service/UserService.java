@@ -1,5 +1,6 @@
 package ua.com.schoolnetwork.service;
 
+import org.springframework.web.multipart.MultipartFile;
 import ua.com.schoolnetwork.entity.User;
 
 import java.util.List;
@@ -14,4 +15,5 @@ public interface UserService  {
     User findOne(int id);
     User findByEmail(String email);
     void changeUser(int id,User user);
+    void saveProfileImage(MultipartFile file, int userId);
 }

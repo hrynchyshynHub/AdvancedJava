@@ -22,6 +22,7 @@ public class User implements UserDetails {
     private int age;
     private String status;
     private String city;
+    private String pathToImage;
     private String phoneNumber;
     private String email;
     private String password;
@@ -72,6 +73,13 @@ public class User implements UserDetails {
         this.age = age;
     }
 
+    public String getPathToImage() {
+        return pathToImage;
+    }
+
+    public void setPathToImage(String pathToImage) {
+        this.pathToImage = pathToImage;
+    }
 
     public List<Message> getInboxMessage() {
         return inboxMessage;

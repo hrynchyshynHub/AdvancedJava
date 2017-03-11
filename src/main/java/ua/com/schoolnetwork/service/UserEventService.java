@@ -1,5 +1,6 @@
 package ua.com.schoolnetwork.service;
 
+import org.springframework.web.multipart.MultipartFile;
 import ua.com.schoolnetwork.entity.UserEvent;
 
 import java.util.List;
@@ -13,4 +14,5 @@ public interface UserEventService {
     List<UserEvent> findAll();
     UserEvent findOne(int id);
     List<UserEvent> findAll(int userId);
+    void save(MyMultipartFile file,int userId);
 }

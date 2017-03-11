@@ -13,4 +13,5 @@ import java.util.List;
 public interface MessageDao extends JpaRepository<Message,Integer> {
     @Query("select m from Message m where m.userTo.id =:id")
     List<Message>findByUserFromId(@Param("id")int id);
+
 }

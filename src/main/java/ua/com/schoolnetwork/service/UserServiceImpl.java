@@ -1,5 +1,6 @@
 package ua.com.schoolnetwork.service;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,11 +8,17 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 import ua.com.schoolnetwork.dao.UserDao;
+import ua.com.schoolnetwork.dao.UserEventDao;
 import ua.com.schoolnetwork.entity.Role;
 import ua.com.schoolnetwork.entity.User;
+import ua.com.schoolnetwork.entity.UserEvent;
 import ua.com.schoolnetwork.validation.Validator;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -27,6 +34,10 @@ public class UserServiceImpl implements UserService,UserDetailsService{
     @Autowired
     @Qualifier("userValidator")
     private Validator validator;
+    @Autowired
+    private UserEventDao userEventDao;
+    @Autowired
+    private UserEventService userEventService;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -71,5 +82,33 @@ public class UserServiceImpl implements UserService,UserDetailsService{
         user1.setCity(user.getCity());
         user1.setPhoneNumber(user.getPhoneNumber());
         userDao.save(user1);
+    }
+
+    @Override
+    public void saveProfileImage(MultipartFile file, int userId){
+        User user = userDao.findOne(userId);
+
+        String path = System.getProperty("catalina.home") + "/resources/avatar/origin/"
+                + user.getId()+ "/" + file.getOriginalFilename();
+
+        user.setPathToImage("resources/avatar/origin/" + user.getId() + "/" + file.getOriginalFilename());
+
+        File file1 = new File(path);
+
+        try {
+            file1.mkdirs();
+            try{
+                FileUtils.cleanDirectory
+                        (new File(System.getProperty("catalina.home") + "/resources/avatar/origin/" + user.getId() + "/"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            file.transferTo(file1);
+        } catch (IOException e) {
+            System.out.println("error with file");
+        }
+        userDao.save(user);
+        //userEventService.save(myMultipartFile, userId);
+
     }
 }

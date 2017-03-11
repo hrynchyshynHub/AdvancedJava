@@ -14,21 +14,22 @@ import java.util.List;
 public class DtoUtilMapper {
 
     public static List<UserDto> userToUserDto(List<User> users){
-        List<UserDto> userDtos = new ArrayList<>();
+        List<UserDto> userDtos = new ArrayList<UserDto>();
         for (User user:users){
             UserDto userDto = new UserDto(user.getId(),user.getFirstName(),user.getSecondName(),
-                    user.getAge(),user.getStatus(),user.getCity(),user.getPhoneNumber(),user.getEmail());
+                    user.getAge(),user.getStatus(),user.getCity(),user.getPhoneNumber(),user.getEmail(),
+                    user.getPathToImage());
             userDtos.add(userDto);
         }
         return userDtos;
     }
     public static UserDto userToUserDto(User user){
         UserDto userDto = new UserDto(user.getId(),user.getFirstName(),user.getSecondName(),
-                user.getAge(),user.getStatus(),user.getCity(),user.getPhoneNumber(),user.getEmail());
+                user.getAge(),user.getStatus(),user.getCity(),user.getPhoneNumber(),user.getEmail(), user.getPathToImage());
         return userDto;
     }
     public static List<UserEventDto> userEventToUserEventsDto(List<UserEvent>userEvents){
-        List<UserEventDto> userEventDtos = new ArrayList<>();
+        List<UserEventDto> userEventDtos = new ArrayList<UserEventDto>();
         for (UserEvent userEvent:userEvents){
             UserEventDto userEventDto = new UserEventDto(userEvent.getId(),userEvent.getDescription(),userEvent.getLocalDate(),userEvent.getLikeCounter(),userEvent.getUser().getFirstName(), userEvent.getUser().getSecondName(),userEvent.getPathToImage());
             userEventDtos.add(userEventDto);
@@ -54,9 +55,9 @@ public class DtoUtilMapper {
         return messageDto;
     }
     public static List<MessageDto> messagesToMessageDtos(List<Message> message){
-        List<MessageDto> messageDtos = new ArrayList<>();
+        List<MessageDto> messageDtos = new ArrayList<MessageDto>();
         for(Message message1:message){
-        String userName = message1.getUserFrom().getFirstName() + message1.getUserFrom().getSecondName();
+        String userName = message1.getUserFrom().getFirstName() +" "+ message1.getUserFrom().getSecondName();
         MessageDto messageDto = new MessageDto(message1.getId(),message1.getMessage(),message1.isReading(),userName);
             messageDtos.add(messageDto);
         }

@@ -6,6 +6,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import ua.com.schoolnetwork.dao.UserDao;
 import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.dto.UserDto;
@@ -67,5 +68,9 @@ public class UserController {
         userService.changeUser(Integer.parseInt(principal.getName()),user);
         return "redirect:/profile";
     }
-
+    @RequestMapping(value = "/saveProfileImage", method = RequestMethod.POST)
+    public  String upadatePhoto(@RequestParam MultipartFile image, Principal principal){
+        userService.saveProfileImage(image,Integer.parseInt(principal.getName()));
+        return "redirect:/profile";
+    }
 }

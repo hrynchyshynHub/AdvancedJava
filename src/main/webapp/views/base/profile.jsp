@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <link rel="stylesheet" href="/css/profile.css">
 <script>
     window.onload = function () {
@@ -24,8 +25,10 @@ function load(res) {
                 '</div> <div class="media-body"> <h4 class="media-heading">'+ res[i].firstName +
                 res[i].secondName +'<span class="pull-right time" style="font-size:13px;">' +
                 res[i].localDate + '</span></h4>'+ res[i].description +
-                '<a onclick="deleteUserEvent('+ index +')">delete</a>'+
-                ' <div class="comments-wrapper"><div class="comment"> <div class="media-left"> <a href="#">'+
+                '<img src="' + res[i].pathToImage +
+                        '" width = "400px" height = "400px"/>'+
+                '<span class="pull-right"><a onclick="deleteUserEvent('+ index +')">delete</a></span>'+
+                '<div class="comments-wrapper"><div class="comment"> <div class="media-left"> <a href="#">'+
                 '<img class="media-object img-circle" src="http://lorempixel.com/30/30" alt=""></a> </div>'+
                 '<div class="media-body"><h4 class="media-heading">Vanya Hrynchyshyn '+
                 '<span class="pull-right" style="font-size:13px;">16:33</span></h4>'+
@@ -45,7 +48,13 @@ function load(res) {
         <div class="col-sm-3 col-lg-3 well text-center">
             <div class="well">
                 <p><h4><a href="#">${user.firstName} ${user.secondName}</a></h4></p>
-                <img src="http://lorempixel.com/200/200" class="img-circle" height="200" width="200" alt="Avatar">
+                <img src="${user.pathToImage}" class="img-circle" height="200" width="200" alt="Avatar">
+                <form:form action="./saveProfileImage?${_csrf.parameterName}=${_csrf.token}"
+                           method="post" enctype="multipart/form-data">
+                    <input type="file" name="image">
+                    <button class="btn btn-success">save image</button>
+                </form:form>
+                ${user.pathToImage}
             </div>
             <div class="well">
                 <p><a href="#">Information</a></p>
@@ -118,6 +127,11 @@ function load(res) {
             }
         });
     }
+
+
+
+
+
     function likeUserEvent(index) {
         $.ajax({
             url: 'likeUserEvent?' + $('input[name=csrf_name]').val() + "=" + $('input[name=csrf_value]').val(),

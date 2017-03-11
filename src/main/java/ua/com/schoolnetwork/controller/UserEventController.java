@@ -2,6 +2,7 @@ package ua.com.schoolnetwork.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import ua.com.schoolnetwork.dto.CommentsDto;
 import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.dto.UserEventDto;
@@ -9,6 +10,7 @@ import ua.com.schoolnetwork.entity.Comments;
 import ua.com.schoolnetwork.entity.UserEvent;
 import ua.com.schoolnetwork.service.CommentsServiceImpl;
 import ua.com.schoolnetwork.service.UserEventService;
+import ua.com.schoolnetwork.service.UserService;
 
 import java.security.Principal;
 import java.util.List;
@@ -20,7 +22,8 @@ import java.util.List;
 public class UserEventController {
     @Autowired
     private UserEventService userEventService;
-
+    @Autowired
+    private UserService userService;
 
 
     @RequestMapping(value = "/savePost", method = RequestMethod.POST)
