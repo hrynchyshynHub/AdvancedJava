@@ -18,6 +18,7 @@
                     <li><a href="#about">Про сайт</a></li>
                     <sec:authorize access="hasRole('ROLE_USER')"><li><a href="/profile">Профіль</a></li></sec:authorize>
                     <sec:authorize access="hasRole('ROLE_USER')"><li><a href="/message">Повідомлення</a></li></sec:authorize>
+                    <sec:authorize access="hasRole('ROLE_USER')"><li><a href="/students">Учні</a></li></sec:authorize>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Спадне меню <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

@@ -30,8 +30,14 @@ public class User implements UserDetails {
     private List<UserEvent> userEvents;
     @OneToMany(mappedBy = "userFrom")
     private List<Message>inboxMessage;
-    @OneToMany(mappedBy = "userTo")
-    private List<Message>outboxMessage;
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_dialog",
+            joinColumns = @JoinColumn(name = "dialog_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<Dialog> dialogs;
     @ManyToMany
     private List<User>friends;
     private boolean isFriend;
@@ -95,14 +101,6 @@ public class User implements UserDetails {
 
     public void setInboxMessage(List<Message> inboxMessage) {
         this.inboxMessage = inboxMessage;
-    }
-
-    public List<Message> getOutboxMessage() {
-        return outboxMessage;
-    }
-
-    public void setOutboxMessage(List<Message> outboxMessage) {
-        this.outboxMessage = outboxMessage;
     }
 
     public List<UserEvent> getUserEvents() {
@@ -173,6 +171,14 @@ public class User implements UserDetails {
         List<SimpleGrantedAuthority> authorities = new ArrayList<SimpleGrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority(role.name()));
         return authorities;
+    }
+
+    public List<Dialog> getDialogs() {
+        return dialogs;
+    }
+
+    public void setDialogs(List<Dialog> dialogs) {
+        this.dialogs = dialogs;
     }
 
     public String getUsername() {

@@ -11,7 +11,6 @@ import java.util.List;
  * Created by ваня on 04.03.2017.
  */
 public interface MessageDao extends JpaRepository<Message,Integer> {
-    @Query("select m from Message m where m.userTo.id =:id")
-    List<Message>findByUserFromId(@Param("id")int id);
-
+    @Query("select m from Message m where m.dialog.id =:id")
+    List<Message>findMessageFromDialog(@Param("id") int id);
 }

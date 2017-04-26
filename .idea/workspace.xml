@@ -2,75 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bc9e272-8f6f-4cb1-8549-7abadbf89b29" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ez_image_ez_image_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MsgController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/message.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/dialog.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_javax_mail_api_1_5_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/lib/activation-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/lib/javax.mail-1.5.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/lib/javax.mail-api-1.5.6.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT.war" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserRestController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/DialogDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/editor/DialogEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/editor/UserEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Dialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/DialogServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/MessageServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/DialogService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/MessageService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/friend.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/im.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/userProfile.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MsgController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/MsgController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/CommentService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/CommentsServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MessageService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MessageServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MyMultipartFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserEventService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserEventServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/MsgController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/CommentService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/CommentsServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MessageService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MessageServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MyMultipartFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserEventService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserEventServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserServiceImpl.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/CommentsController.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/CommentsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/MessageController.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/MessageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/UserController.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/UserEventController.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/controller/UserEventController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dao/MessageDao.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dao/MessageDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/CommentsDto.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/CommentsDto.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/DtoUtilMapper.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/DtoUtilMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/UserDto.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/UserDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/MessageDto.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/dto/MessageDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/entity/Message.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/entity/Message.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/entity/User.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MessageService.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MessageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MessageServiceImpl.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/MessageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserEventService.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserEventService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserEventServiceImpl.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserEventServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserService.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/ua/com/schoolnetwork/service/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/CommentsController.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/CommentsController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/MessageController.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/MessageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/UserEventController.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/controller/UserEventController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dao/MessageDao.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dao/MessageDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dao/UserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/CommentsDto.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/CommentsDto.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/DtoUtilMapper.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/DtoUtilMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/UserDto.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/UserDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/MessageDto.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/dto/MessageDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/entity/Message.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/entity/Message.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MessageService.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MessageService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MessageServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/MessageServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserEventService.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserEventService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserEventServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserEventServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/ua/com/schoolnetwork/service/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/AdvancedJava_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/AdvancedJava_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AdvancedJava.iml" afterPath="$PROJECT_DIR$/AdvancedJava.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/CommentsController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/CommentsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserEventController.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserEventController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/MessageDao.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/MessageDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/CommentsDto.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/CommentsDto.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserDto.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Message.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Message.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/message.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/message.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/base/message.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/message.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/appContext.xml" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/appContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/WEB-INF/security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/resources/css/message.css" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/resources/css/message.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/base/message.jsp" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/base/message.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/base/profile.jsp" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/base/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/tiles/template.jsp" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/tiles/template.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/tiles/header.jsp" afterPath="$PROJECT_DIR$/target/SchoolNetwork-1.0-SNAPSHOT/views/tiles/header.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/CommentService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/CommentService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/CommentsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/CommentsServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/UserEventService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/UserEventServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/UserService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/UserServiceImpl.java" />
     </list>
     <ignored path="SchoolNetwork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,97 +120,169 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp">
+      <file leaf-file-name="message.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/message.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+            <state relative-caret-position="272">
+              <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
               <folding>
-                <marker date="1489234628060" expanded="true" signature="1106:1121" ph="..." />
-                <marker date="1489234628060" expanded="true" signature="1774:1789" ph="..." />
-                <marker date="1489234628060" expanded="true" signature="7678:7693" ph="..." />
-                <marker date="1489234628060" expanded="true" signature="8245:8260" ph="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="servlet-context.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml">
+      <file leaf-file-name="UserRestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserRestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+            <state relative-caret-position="425">
+              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+              <folding>
+                <marker date="1492851760510" expanded="true" signature="1179:1194" ph="..." />
+                <marker date="1492851760510" expanded="true" signature="3171:3186" ph="..." />
+                <marker date="1492851760510" expanded="true" signature="3782:3797" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="im.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/im.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserServiceImpl.java">
+      <file leaf-file-name="MessageDto.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="110" column="10" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="629">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <folding>
+                <element signature="e#507#508#0" expanded="false" />
+                <element signature="e#532#533#0" expanded="false" />
+                <element signature="e#565#566#0" expanded="false" />
+                <element signature="e#593#594#0" expanded="false" />
+                <element signature="e#627#628#0" expanded="false" />
+                <element signature="e#657#658#0" expanded="false" />
+                <element signature="e#703#704#0" expanded="false" />
+                <element signature="e#741#742#0" expanded="false" />
+                <element signature="e#775#776#0" expanded="false" />
+                <element signature="e#807#808#0" expanded="false" />
+                <element signature="e#854#855#0" expanded="false" />
+                <element signature="e#889#890#0" expanded="false" />
+                <element signature="e#924#925#0" expanded="false" />
+                <element signature="e#955#956#0" expanded="false" />
+                <element signature="e#1003#1004#0" expanded="false" />
+                <element signature="e#1043#1044#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Object.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/lang/Object.java">
+      <file leaf-file-name="DtoUtilMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="211" column="69" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="69" />
-              <folding />
+            <state relative-caret-position="1003">
+              <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java">
+      <file leaf-file-name="Message.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#478#479#0" expanded="false" />
+                <element signature="e#503#504#0" expanded="false" />
+                <element signature="e#536#537#0" expanded="false" />
+                <element signature="e#564#565#0" expanded="false" />
+                <element signature="e#597#598#0" expanded="false" />
+                <element signature="e#628#629#0" expanded="false" />
+                <element signature="e#674#675#0" expanded="false" />
+                <element signature="e#714#715#0" expanded="false" />
+                <element signature="e#747#748#0" expanded="false" />
+                <element signature="e#776#777#0" expanded="false" />
+                <element signature="e#820#821#0" expanded="false" />
+                <element signature="e#856#857#0" expanded="false" />
+                <element signature="e#895#896#0" expanded="false" />
+                <element signature="e#927#928#0" expanded="false" />
+                <element signature="e#980#981#0" expanded="false" />
+                <element signature="e#1022#1023#0" expanded="false" />
+                <element signature="e#1056#1057#0" expanded="false" />
+                <element signature="e#1086#1087#0" expanded="false" />
+                <element signature="e#1132#1133#0" expanded="false" />
+                <element signature="e#1170#1171#0" expanded="false" />
+                <element signature="e#1204#1205#0" expanded="false" />
+                <element signature="e#1236#1237#0" expanded="false" />
+                <element signature="e#1283#1284#0" expanded="false" />
+                <element signature="e#1318#1319#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserEventService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java">
+      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#822#823#0" expanded="false" />
+                <element signature="e#862#863#0" expanded="false" />
+                <element signature="e#966#967#0" expanded="false" />
+                <element signature="e#1006#1007#0" expanded="false" />
+                <element signature="e#1211#1212#0" expanded="false" />
+                <element signature="e#1255#1256#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserEventServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java">
+      <file leaf-file-name="MessageServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/MessageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registration.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/registration.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDto.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#910#911#0" expanded="false" />
+                <element signature="e#954#955#0" expanded="false" />
+                <element signature="e#1032#1033#0" expanded="false" />
+                <element signature="e#1097#1098#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,10 +294,10 @@
       <list>
         <option value="package-info" />
         <option value="Enum" />
-        <option value="Interface" />
         <option value="CSS File" />
-        <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -221,57 +312,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Image.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/validation/Validator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/validation/ValidationMessages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/validation/UserValidatorException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/base/registration.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/validation/UserValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/base/editProfile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/RestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserEventDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Comments.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/CommentsDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/CommentsDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/CommentsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/CommentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/CommentsController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/profile.css" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/UserEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserEventDto.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/message.css" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/base/message.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/base/im.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/base/dialog.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/main/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MsgController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/MessageDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserEventController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MyMultipartFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/base/friend.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/UserEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/CommentsDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/CommentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/base/userProfile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MsgController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/DialogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/DialogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/CommentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/UserEventService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/CommentsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/UserEventServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Dialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/MessageServiceImol.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/MessageDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/message.css" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/editor/DialogEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/editor/UserEditor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/DialogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/DialogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/DialogDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/base/message.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/base/im.jsp" />
       </list>
     </option>
   </component>
@@ -356,7 +447,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -389,6 +479,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -409,10 +503,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -497,6 +587,40 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolNetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdvancedJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -579,6 +703,44 @@
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolNetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdvancedJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schoolnetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -607,6 +769,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolNetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdvancedJava" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schoolnetwork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="editor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,6 +894,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -714,7 +907,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="D:/FirstApp.SpringBoot-Mysql-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -1310,39 +1503,61 @@
       <workItem from="1488982115124" duration="9380000" />
       <workItem from="1489154765347" duration="3805000" />
       <workItem from="1489218994190" duration="17764000" />
+      <workItem from="1489247903888" duration="2038000" />
+      <workItem from="1489414201653" duration="787000" />
+      <workItem from="1489421254813" duration="1028000" />
+      <workItem from="1489493069090" duration="34000" />
+      <workItem from="1489763216053" duration="1193000" />
+      <workItem from="1489839047830" duration="138000" />
+      <workItem from="1490701381456" duration="1093000" />
+      <workItem from="1490711418445" duration="930000" />
+      <workItem from="1490791138377" duration="14078000" />
+      <workItem from="1490887632866" duration="2081000" />
+      <workItem from="1490986906835" duration="5749000" />
+      <workItem from="1491227290239" duration="988000" />
+      <workItem from="1491324515971" duration="663000" />
+      <workItem from="1491331506252" duration="1178000" />
+      <workItem from="1491390132915" duration="1418000" />
+      <workItem from="1491397516426" duration="2893000" />
+      <workItem from="1491566900805" duration="1546000" />
+      <workItem from="1492249538278" duration="827000" />
+      <workItem from="1492282389173" duration="2884000" />
+      <workItem from="1492846623029" duration="19825000" />
+      <workItem from="1493133408541" duration="8430000" />
+      <workItem from="1493206209180" duration="782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158182000" />
+    <option name="totallyTimeSpent" value="228765000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22844176" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3846154" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15213676" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2655068" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22844176" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37435898" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1360,7 +1575,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserRestController.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1369,110 +1592,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="228" column="14" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/editProfile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/friend.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/CommentsDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="14" column="106" selection-start-line="14" selection-start-column="106" selection-end-line="14" selection-end-column="106" />
+        <state relative-caret-position="219">
+          <caret line="63" column="33" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Comments.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserEventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/userProfile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="223" column="24" selection-start-line="223" selection-start-column="24" selection-end-line="223" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MsgController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/CommentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserEventDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="31" />
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/CommentsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Role.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#815#816#0" expanded="false" />
-            <element signature="e#861#862#0" expanded="false" />
-            <element signature="e#914#915#0" expanded="false" />
-            <element signature="e#958#959#0" expanded="false" />
-            <element signature="e#1006#1007#0" expanded="false" />
-            <element signature="e#1044#1045#0" expanded="false" />
-            <element signature="e#1337#1338#0" expanded="false" />
-            <element signature="e#1400#1401#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/CommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/fonts/fontawesome-webfont.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/UserEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
-          <folding>
-            <element signature="e#1532#1533#0" expanded="false" />
-            <element signature="e#1586#1587#0" expanded="false" />
-            <element signature="e#1632#1633#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/footer.jsp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="30" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#1198#1199#0" expanded="false" />
-            <element signature="e#1230#1231#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="60" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserEventDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1483,45 +1713,274 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/profile.css">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Comments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/UserEventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/CommentsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/UserEventServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserEventDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="e#450#451#0" expanded="false" />
-            <element signature="e#475#476#0" expanded="false" />
-          </folding>
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="76" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/message.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/im.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/loginpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1907#1908#0" expanded="false" />
+            <element signature="e#1947#1948#0" expanded="false" />
+            <element signature="e#1995#1996#0" expanded="false" />
+            <element signature="e#2029#2030#0" expanded="false" />
+            <element signature="e#2078#2079#0" expanded="false" />
+            <element signature="e#2119#2120#0" expanded="false" />
+            <element signature="e#2178#2179#0" expanded="false" />
+            <element signature="e#2227#2228#0" expanded="false" />
+            <element signature="e#3670#3671#0" expanded="false" />
+            <element signature="e#3724#3725#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/editor/UserEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/editor/DialogEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/dialog.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/DialogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1754#1755#0" expanded="false" />
+            <element signature="e#1808#1809#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/interfaces/DialogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/DialogDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="102" selection-start-line="16" selection-start-column="102" selection-end-line="16" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/MessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#478#479#0" expanded="false" />
+            <element signature="e#503#504#0" expanded="false" />
+            <element signature="e#536#537#0" expanded="false" />
+            <element signature="e#564#565#0" expanded="false" />
+            <element signature="e#597#598#0" expanded="false" />
+            <element signature="e#628#629#0" expanded="false" />
+            <element signature="e#674#675#0" expanded="false" />
+            <element signature="e#714#715#0" expanded="false" />
+            <element signature="e#747#748#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#820#821#0" expanded="false" />
+            <element signature="e#856#857#0" expanded="false" />
+            <element signature="e#895#896#0" expanded="false" />
+            <element signature="e#927#928#0" expanded="false" />
+            <element signature="e#980#981#0" expanded="false" />
+            <element signature="e#1022#1023#0" expanded="false" />
+            <element signature="e#1056#1057#0" expanded="false" />
+            <element signature="e#1086#1087#0" expanded="false" />
+            <element signature="e#1132#1133#0" expanded="false" />
+            <element signature="e#1170#1171#0" expanded="false" />
+            <element signature="e#1204#1205#0" expanded="false" />
+            <element signature="e#1236#1237#0" expanded="false" />
+            <element signature="e#1283#1284#0" expanded="false" />
+            <element signature="e#1318#1319#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/impl/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#910#911#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
+            <element signature="e#1097#1098#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/MessageDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding>
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#532#533#0" expanded="false" />
+            <element signature="e#565#566#0" expanded="false" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#657#658#0" expanded="false" />
+            <element signature="e#703#704#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#889#890#0" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1043#1044#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+          <folding>
+            <marker date="1492851760510" expanded="true" signature="1179:1194" ph="..." />
+            <marker date="1492851760510" expanded="true" signature="3171:3186" ph="..." />
+            <marker date="1492851760510" expanded="true" signature="3782:3797" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1530,286 +1989,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="34" />
+        <state relative-caret-position="340">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#775#776#0" expanded="false" />
-            <element signature="e#879#880#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-            <element signature="e#982#983#0" expanded="false" />
-            <element signature="e#1027#1028#0" expanded="false" />
-            <element signature="e#1124#1125#0" expanded="false" />
-            <element signature="e#1168#1169#0" expanded="false" />
+            <element signature="e#822#823#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
+            <element signature="e#1211#1212#0" expanded="false" />
+            <element signature="e#1255#1256#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/dialog.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/message.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/im.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/main/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <marker date="1489222201944" expanded="false" signature="46:262" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/MsgController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dao/MessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/CommentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-          <folding>
-            <element signature="e#1770#1771#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="99" selection-start-line="9" selection-start-column="99" selection-end-line="9" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/DtoUtilMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="27" column="109" selection-start-line="27" selection-start-column="109" selection-end-line="27" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/709f372a/c153ac51-7451-4bd9-a21d-aba5d79139a3/schoolnetwork.user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserEventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserEventDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="75" column="36" selection-start-line="75" selection-start-column="36" selection-end-line="75" selection-end-column="36" />
-          <folding>
-            <element signature="e#1770#1771#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/dto/UserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/registration.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/base/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
-          <folding>
-            <marker date="1489234628060" expanded="true" signature="1106:1121" ph="..." />
-            <marker date="1489234628060" expanded="true" signature="1774:1789" ph="..." />
-            <marker date="1489234628060" expanded="true" signature="7678:7693" ph="..." />
-            <marker date="1489234628060" expanded="true" signature="8245:8260" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserEventServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="211" column="69" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/MyMultipartFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/com/schoolnetwork/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="110" column="10" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
+        <state relative-caret-position="-51">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding />
         </state>
       </provider>

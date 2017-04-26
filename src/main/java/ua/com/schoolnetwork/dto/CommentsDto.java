@@ -8,6 +8,7 @@ import java.time.LocalDate;
 public class CommentsDto {
     private int id;
     private String comment;
+    private int userEventId;
     private LocalDate localDate;
     private String firstName;
     private String secondName;
@@ -59,4 +60,13 @@ public class CommentsDto {
     public void setSecondName(String secondName) {
         this.secondName = secondName;
     }
+
+    public int getUserEventId() {
+        return userEventId;
+    }
+
+    public void setUserEventId(int userEventId) {
+        this.userEventId = userEventId;
+    }
 }
+

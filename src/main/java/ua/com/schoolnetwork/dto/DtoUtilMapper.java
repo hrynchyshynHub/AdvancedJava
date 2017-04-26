@@ -45,6 +45,7 @@ public class DtoUtilMapper {
         List<CommentsDto> commentsDtos = new ArrayList<CommentsDto>();
         for(Comments comments:commentses){
             CommentsDto commentsDto = new CommentsDto(comments.getId(),comments.getComment(),comments.getLocalDate(),comments.getUser().getFirstName(),comments.getUser().getSecondName());
+            commentsDto.setUserEventId(comments.getUserEvent().getId());
             commentsDtos.add(commentsDto);
         }
         return commentsDtos;
@@ -52,6 +53,7 @@ public class DtoUtilMapper {
     public static MessageDto messageToMessageDto(Message message){
         String userName = message.getUserFrom().getFirstName() + message.getUserFrom().getSecondName();
         MessageDto messageDto = new MessageDto(message.getId(),message.getMessage(),message.isReading(),userName);
+        messageDto.setDate(message.getLocalDate());
         return messageDto;
     }
     public static List<MessageDto> messagesToMessageDtos(List<Message> message){
@@ -59,6 +61,7 @@ public class DtoUtilMapper {
         for(Message message1:message){
         String userName = message1.getUserFrom().getFirstName() +" "+ message1.getUserFrom().getSecondName();
         MessageDto messageDto = new MessageDto(message1.getId(),message1.getMessage(),message1.isReading(),userName);
+            messageDto.setDate(message1.getLocalDate());
             messageDtos.add(messageDto);
         }
         return messageDtos;

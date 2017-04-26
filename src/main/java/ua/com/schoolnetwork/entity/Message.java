@@ -14,7 +14,7 @@ public class Message {
     @ManyToOne
     private User userFrom;
     @ManyToOne
-    private User userTo;
+    private Dialog dialog;
     private LocalDate localDate;
     private String message;
     private boolean isReading;
@@ -28,6 +28,22 @@ public class Message {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public User getUserFrom() {
+        return userFrom;
+    }
+
+    public void setUserFrom(User userFrom) {
+        this.userFrom = userFrom;
+    }
+
+    public Dialog getDialog() {
+        return dialog;
+    }
+
+    public void setDialog(Dialog dialog) {
+        this.dialog = dialog;
     }
 
     public LocalDate getLocalDate() {
@@ -44,22 +60,6 @@ public class Message {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public User getUserFrom() {
-        return userFrom;
-    }
-
-    public void setUserFrom(User userFrom) {
-        this.userFrom = userFrom;
-    }
-
-    public User getUserTo() {
-        return userTo;
-    }
-
-    public void setUserTo(User userTo) {
-        this.userTo = userTo;
     }
 
     public boolean isReading() {

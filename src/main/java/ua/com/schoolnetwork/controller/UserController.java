@@ -1,20 +1,17 @@
 package ua.com.schoolnetwork.controller;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import ua.com.schoolnetwork.dao.UserDao;
 import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.dto.UserDto;
 import ua.com.schoolnetwork.entity.User;
-import ua.com.schoolnetwork.service.UserService;
+import ua.com.schoolnetwork.service.interfaces.UserService;
 
 import java.security.Principal;
-import java.util.List;
 
 /**
  * Created by ваня on 12.02.2017.
@@ -72,5 +69,10 @@ public class UserController {
     public  String upadatePhoto(@RequestParam MultipartFile image, Principal principal){
         userService.saveProfileImage(image,Integer.parseInt(principal.getName()));
         return "redirect:/profile";
+    }
+    @RequestMapping(value = "/profile/{id}")
+    public String profile(@PathVariable int id,Model model){
+        model.addAttribute("user", DtoUtilMapper.userToUserDto(userService.findOne(id)));
+        return "views-base-userProfile";
     }
 }

@@ -1,5 +1,7 @@
 package ua.com.schoolnetwork.dto;
 
+import java.time.LocalDate;
+
 /**
  * Created by ваня on 04.03.2017.
  */
@@ -8,6 +10,7 @@ public class MessageDto {
     private String message;
     private boolean isReading;
     private String userFrom;
+    private LocalDate date;
 
     public MessageDto(int id, String message, boolean isReading, String userFrom) {
         this.id = id;
@@ -46,5 +49,13 @@ public class MessageDto {
 
     public void setUserFrom(String userFrom) {
         this.userFrom = userFrom;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 }

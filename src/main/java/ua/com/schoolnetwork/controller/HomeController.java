@@ -6,9 +6,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ua.com.schoolnetwork.dto.DtoUtilMapper;
+import ua.com.schoolnetwork.entity.Dialog;
 import ua.com.schoolnetwork.entity.Message;
 import ua.com.schoolnetwork.entity.User;
-import ua.com.schoolnetwork.service.UserService;
+import ua.com.schoolnetwork.service.interfaces.UserService;
+
+import java.security.Principal;
 
 /**
  * Created by ваня on 05.02.2017.
@@ -43,10 +46,10 @@ public class HomeController {
         model.addAttribute("user",new User());
         return "views-base-registration";
     }
-    @RequestMapping(value = "/message", method = RequestMethod.GET)
-    public String message(Model model){
-        model.addAttribute("message", new Message());
+
+    @RequestMapping(value = "/students", method = RequestMethod.GET)
+    public String getStudents(Model model, Principal principal){
         model.addAttribute("users", DtoUtilMapper.userToUserDto(userService.findAll()));
-        return "views-base-message";
+        return "views-base-friend";
     }
 }
