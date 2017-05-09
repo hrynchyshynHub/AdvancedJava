@@ -1,6 +1,7 @@
 package ua.com.schoolnetwork.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.dto.MessageDto;
@@ -9,6 +10,7 @@ import ua.com.schoolnetwork.service.interfaces.DialogService;
 import ua.com.schoolnetwork.service.interfaces.MessageService;
 import ua.com.schoolnetwork.service.interfaces.UserService;
 
+import javax.enterprise.inject.Produces;
 import java.security.Principal;
 import java.util.List;
 
@@ -29,15 +31,19 @@ public class UserRestController{
         System.out.println("added id = " + id);
         userService.addToFriend(Integer.parseInt(id), Integer.parseInt(principal.getName()));
     }
-    @RequestMapping(value = "loadMessages", method = RequestMethod.POST)
+    @RequestMapping(value = "/loadMessages", method = RequestMethod.POST)
     public @ResponseBody List<MessageDto> loadMessage(@RequestParam String dialogId){
         return DtoUtilMapper.messagesToMessageDtos(messageService.findMessagesForDialog(Integer.parseInt(dialogId)));
     }
-    @RequestMapping(value = "/sendMessage/dialogID={id}", method = RequestMethod.POST)
-    public @ResponseBody MessageDto sendMessage(Message message,Principal principal,@PathVariable String id){
-        message.setUserFrom(userService.findOne(Integer.parseInt(principal.getName())));
-        messageService.addMessageToDialog(message,Integer.parseInt(id));
-        return DtoUtilMapper.messageToMessageDto(message);
+    @RequestMapping(value = "/sendMessage", method = RequestMethod.POST,
+            consumes = MediaType.ALL_VALUE,
+            produces = MediaType.ALL_VALUE,
+            headers = "Accept=*/*")
+    public @ResponseBody MessageDto sendMessage(@RequestBody MessageDto messageDto,Principal principal){
+        System.out.println("into send message");
+        messageService.messageDtoToMessage(messageDto, Integer.parseInt(principal.getName()));
+        return messageDto;
     }
+
 
 }

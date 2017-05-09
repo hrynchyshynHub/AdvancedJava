@@ -5,12 +5,9 @@ import ua.com.schoolnetwork.entity.Message;
 import ua.com.schoolnetwork.entity.User;
 import ua.com.schoolnetwork.entity.UserEvent;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by ваня on 13.02.2017.
- */
 public class DtoUtilMapper {
 
     public static List<UserDto> userToUserDto(List<User> users){
@@ -54,6 +51,7 @@ public class DtoUtilMapper {
         String userName = message.getUserFrom().getFirstName() + message.getUserFrom().getSecondName();
         MessageDto messageDto = new MessageDto(message.getId(),message.getMessage(),message.isReading(),userName);
         messageDto.setDate(message.getLocalDate());
+        messageDto.setDialogId(message.getDialog().getId());
         return messageDto;
     }
     public static List<MessageDto> messagesToMessageDtos(List<Message> message){
@@ -62,8 +60,10 @@ public class DtoUtilMapper {
         String userName = message1.getUserFrom().getFirstName() +" "+ message1.getUserFrom().getSecondName();
         MessageDto messageDto = new MessageDto(message1.getId(),message1.getMessage(),message1.isReading(),userName);
             messageDto.setDate(message1.getLocalDate());
+            messageDto.setDialogId(message1.getDialog().getId());
             messageDtos.add(messageDto);
         }
         return messageDtos;
     }
+
 }

@@ -48,7 +48,7 @@
 
         <div class="col-md-8">
             <c:forEach var="dialog" items="${dialogs}">
-               <a href = "im/${dialog.id}">${dialog.name}</a><br>
+               <a href = "/im/${dialog.id}">${dialog.name}</a><br>
             </c:forEach>
         </div>
     </div>

@@ -1,13 +1,9 @@
 package ua.com.schoolnetwork.controller;
-
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.annotation.RequestScope;
-import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.editor.DialogEditor;
 import ua.com.schoolnetwork.editor.UserEditor;
 import ua.com.schoolnetwork.entity.Dialog;
@@ -50,8 +46,15 @@ public class MessageController {
         dialogService.createDialog(name,usersId);
         return "redirect:/message";
     }
-    @RequestMapping(value = "im/{id}", method = RequestMethod.GET)
+   // @RequestMapping(value = "/im?dialogId={id}", method = RequestMethod.GET)
     public String im(@PathVariable int id,Model model){
+        System.out.println("id is " + id);
+        model.addAttribute("messages", messageService.findMessagesForDialog(id));
+        return "views-base-im";
+    }
+    @GetMapping("/im/{id}")
+    public String test(@PathVariable int id,Model model){
+        System.out.println("id is " + id);
         model.addAttribute("messages", messageService.findMessagesForDialog(id));
         return "views-base-im";
     }

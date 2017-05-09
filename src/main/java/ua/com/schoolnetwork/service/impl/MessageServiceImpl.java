@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.com.schoolnetwork.dao.DialogDao;
 import ua.com.schoolnetwork.dao.MessageDao;
+import ua.com.schoolnetwork.dao.UserDao;
+import ua.com.schoolnetwork.dto.MessageDto;
 import ua.com.schoolnetwork.entity.Dialog;
 import ua.com.schoolnetwork.entity.Message;
 import ua.com.schoolnetwork.service.interfaces.DialogService;
@@ -22,6 +24,8 @@ public class MessageServiceImpl implements MessageService{
     private MessageDao messageDao;
     @Autowired
     private DialogDao dialogDao;
+    @Autowired
+    private UserDao userDao;
 
     @Override
     public void save(Message message) {
@@ -45,5 +49,16 @@ public class MessageServiceImpl implements MessageService{
         messageDao.saveAndFlush(message);
         message.setDialog(dialogDao.findOne(dialogId));
         messageDao.save(message);
+    }
+
+    @Override
+    public MessageDto messageDtoToMessage(MessageDto messageDto, int userId) {
+        Message message = new Message();
+        message.setMessage(messageDto.getMessage());
+        message.setUserFrom(userDao.findOne(userId));
+        message.setLocalDate(LocalDate.now());
+        message.setDialog(dialogDao.findOne(messageDto.getDialogId()));
+        messageDao.saveAndFlush(message);
+        return messageDto;
     }
 }
