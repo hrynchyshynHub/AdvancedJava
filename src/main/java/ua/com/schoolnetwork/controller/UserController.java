@@ -49,9 +49,8 @@ public class UserController{
     }
     @RequestMapping(value = "/profile",method = RequestMethod.GET)
     public String userProfile(Model model, Principal principal){
-        User user = userService.findOne(Integer.parseInt(principal.getName()));
-        UserDto userDto = DtoUtilMapper.userToUserDto(user);
-        model.addAttribute("user",userDto);
+        System.out.println(principal.getName());
+         model.addAttribute("user",DtoUtilMapper.userToUserDto(userService.findOne(Integer.parseInt(principal.getName()))));
         return "views-base-profile";
     }
     @RequestMapping(value = "/edit",method = RequestMethod.GET)
@@ -71,7 +70,7 @@ public class UserController{
         return "redirect:/profile";
     }
     @RequestMapping(value = "/profile/{id}")
-    public String profile(@PathVariable int id,Model model){
+    public String profile(@PathVariable int id,Model model, Principal principal){
         model.addAttribute("user", DtoUtilMapper.userToUserDto(userService.findOne(id)));
         return "views-base-userProfile";
     }

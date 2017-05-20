@@ -1,5 +1,6 @@
 package ua.com.schoolnetwork.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -26,12 +27,15 @@ public class User implements UserDetails {
     private String phoneNumber;
     private String email;
     private String password;
+    @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<UserEvent> userEvents;
+    @JsonIgnore
     @OneToMany(mappedBy = "userFrom")
     private List<Message>inboxMessage;
 
     @ManyToMany
+    @JsonIgnore
     @JoinTable(
             name = "user_dialog",
             joinColumns = @JoinColumn(name = "dialog_id"),
@@ -39,6 +43,7 @@ public class User implements UserDetails {
     )
     private List<Dialog> dialogs;
     @ManyToMany
+    @JsonIgnore
     private List<User>friends;
     private boolean isFriend;
     @Enumerated

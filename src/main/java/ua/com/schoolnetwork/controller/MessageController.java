@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
+import ua.com.schoolnetwork.dto.MessageDto;
 import ua.com.schoolnetwork.editor.DialogEditor;
 import ua.com.schoolnetwork.editor.UserEditor;
 import ua.com.schoolnetwork.entity.Dialog;
@@ -14,6 +15,7 @@ import ua.com.schoolnetwork.service.interfaces.MessageService;
 import ua.com.schoolnetwork.service.interfaces.UserService;
 
 import java.security.Principal;
+import java.time.LocalDate;
 
 /**
  * Created by ваня on 22.04.2017.
@@ -27,36 +29,35 @@ public class MessageController {
     @Autowired
     private DialogService dialogService;
 
-    @InitBinder
-    public void InitBinder(WebDataBinder binder){
-        binder.registerCustomEditor(User.class,new UserEditor(userService));
-        binder.registerCustomEditor(Dialog.class, new DialogEditor(dialogService));
-    }
-
     @RequestMapping(value = "/message", method = RequestMethod.GET)
     public String message(Model model, Principal principal){
         model.addAttribute("dialogs", dialogService.findUserDialogs(Integer.parseInt(principal.getName())));
         model.addAttribute("dialog", new Dialog());
-        model.addAttribute("users", userService.findAll());
+        model.addAttribute("users", userService.findAllWithOutPrincipal(Integer.parseInt(principal.getName())));
         return "views-base-message";
     }
 
     @RequestMapping(value = "/createDialog" , method = RequestMethod.POST)
-    public String createDialog(@RequestParam String name, @RequestParam int []usersId){
-        dialogService.createDialog(name,usersId);
+    public String createDialog(@RequestParam String name, @RequestParam int []usersId, Principal principal){
+        dialogService.createDialog(principal,name,usersId);
         return "redirect:/message";
     }
-   // @RequestMapping(value = "/im?dialogId={id}", method = RequestMethod.GET)
-    public String im(@PathVariable int id,Model model){
-        System.out.println("id is " + id);
-        model.addAttribute("messages", messageService.findMessagesForDialog(id));
-        return "views-base-im";
-    }
-    @GetMapping("/im/{id}")
+
+    @GetMapping(value = "/im/{id}")
     public String test(@PathVariable int id,Model model){
         System.out.println("id is " + id);
         model.addAttribute("messages", messageService.findMessagesForDialog(id));
         return "views-base-im";
+    }
+    @RequestMapping(value = "/sendMessage/{id}", method = RequestMethod.POST)
+    public String sendMessage(@RequestParam String message,Principal principal,@PathVariable int id){
+        System.out.println("into send message");
+        Message message1 = new Message();
+        message1.setUserFrom(userService.findOne(Integer.parseInt(principal.getName())));
+        message1.setDialog(dialogService.findOne(id));
+        message1.setLocalDate(LocalDate.now());
+        messageService.save(message1);
+        return "redirect:/im/" + id;
     }
 
 }

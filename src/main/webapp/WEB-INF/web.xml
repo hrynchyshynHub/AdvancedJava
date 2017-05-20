@@ -8,7 +8,7 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/servlet-context.xml</param-value>
+            <param-value>/WEB-INF/beans.xml</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
@@ -30,7 +30,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/security.xml</param-value>
+        <param-value>/WEB-INF/beans.xml</param-value>
     </context-param>
 
     <!-- Listener необхідний для того, щоб була можливість підлючити context-param

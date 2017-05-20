@@ -9,6 +9,7 @@ import ua.com.schoolnetwork.entity.Message;
 import ua.com.schoolnetwork.entity.User;
 import ua.com.schoolnetwork.service.interfaces.DialogService;
 
+import java.security.Principal;
 import java.util.List;
 
 /**
@@ -42,17 +43,19 @@ public class DialogServiceImpl implements DialogService {
     }
 
     @Override
-    public void createDialog(String name, int... idUsers) {
+    public void createDialog(Principal principal, String name, int... idUsers) {
         Dialog dialog = new Dialog();
         dialog.setName(name);
-        dialog.setMembers(idUsers.length);
+        dialog.setMembers(idUsers.length+1);
         dialogDao.saveAndFlush(dialog);
         for (Integer id:idUsers) {
             User user = userDao.findOne(id);
             user.getDialogs().add(dialog);
             userDao.save(user);
         }
-
+        User user = userDao.findOne(Integer.parseInt(principal.getName()));
+        user.getDialogs().add(dialog);
+        userDao.save(user);
     }
 
     @Override

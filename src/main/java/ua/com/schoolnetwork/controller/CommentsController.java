@@ -4,7 +4,10 @@ import org.springframework.web.bind.annotation.*;
 import ua.com.schoolnetwork.dto.CommentsDto;
 import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.entity.Comments;
+import ua.com.schoolnetwork.entity.User;
 import ua.com.schoolnetwork.service.interfaces.CommentService;
+import ua.com.schoolnetwork.service.interfaces.UserService;
+
 import java.security.Principal;
 import java.util.List;
 
@@ -13,6 +16,8 @@ public class CommentsController{
 
     @Autowired
     private CommentService commentService;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping(value ="/loadComments", method = RequestMethod.POST)
     public @ResponseBody
@@ -21,9 +26,13 @@ public class CommentsController{
         return DtoUtilMapper.commentsToComentsDto(commentses);
     }
     @RequestMapping(value = "/saveComment", method = RequestMethod.POST)
-    public @ResponseBody void saveComment(@RequestBody Comments comments, Principal principal){
-        System.out.println("inside save comrnyts methof");
-        commentService.save(comments,Integer.parseInt(principal.getName()));
-
+    public @ResponseBody CommentsDto saveComment(@RequestBody CommentsDto commentDto, Principal principal){
+        User user = userService.findOne(Integer.parseInt(principal.getName()));
+        CommentsDto commentsDto = new CommentsDto(commentDto.getComment(), commentDto.getId());
+        commentsDto.setUserEventId(commentDto.getUserEventId());
+        commentsDto.setFirstName(user.getFirstName());
+        commentsDto.setSecondName(user.getSecondName());
+        commentService.save(commentsDto,Integer.parseInt(principal.getName()));
+        return commentDto;
     }
 }

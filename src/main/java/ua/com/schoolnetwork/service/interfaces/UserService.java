@@ -11,6 +11,7 @@ import java.util.List;
 public interface UserService  {
     void saveUser(User user) throws Exception;
     List<User>findAll();
+    List<User>findAllWithOutPrincipal(int id);
     void delete(int id);
     User findOne(int id);
     User findByEmail(String email);

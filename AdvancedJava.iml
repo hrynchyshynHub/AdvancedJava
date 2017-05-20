@@ -20,7 +20,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
-          <factory-entry name="primary" />
+          <factory-entry name="Main" value="dataSource" />
         </datasource-mapping>
       </configuration>
     </facet>
@@ -29,9 +29,7 @@
         <fileset id="web application context" name="MVC application context" removed="true" />
         <fileset id="web dispatcher servlet context" name="MVC dispatcher servlet context" removed="true" />
         <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/appContext.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/security.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/servlet-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/beans.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -64,7 +62,7 @@
     <orderEntry type="library" name="Maven: javax.annotation:jsr250-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.36" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.5" level="project" />
     <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />

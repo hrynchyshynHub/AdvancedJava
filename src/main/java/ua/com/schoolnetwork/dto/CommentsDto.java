@@ -13,6 +13,14 @@ public class CommentsDto {
     private String firstName;
     private String secondName;
 
+    public CommentsDto() {
+    }
+
+    public CommentsDto(String comment, int userEventId) {
+        this.comment = comment;
+        this.userEventId = userEventId;
+    }
+
     public CommentsDto(int id, String comment, LocalDate localDate, String firstName, String secondName) {
         this.id = id;
         this.comment = comment;

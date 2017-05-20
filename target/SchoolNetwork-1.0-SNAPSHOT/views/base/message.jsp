@@ -48,13 +48,12 @@
 
         <div class="col-md-8">
             <c:forEach var="dialog" items="${dialogs}">
-               <a href = "/im/${dialog.id}">${dialog.name}</a><br>
+                <div class="messageWrapper">
+               <a  href = "/im/${dialog.id}">${dialog.name} </a><br>
+                    <p>кількість учасників: ${dialog.members}</p>
+                </div>
             </c:forEach>
         </div>
     </div>
 </div>
 
-<input type="hidden" name="csrf_name"
-       value="${_csrf.parameterName}" />
-<input type="hidden" name="csrf_value"
-       value="${_csrf.token}"/>

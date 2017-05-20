@@ -21,6 +21,10 @@ h5{
     padding: 10px  40px;
 
 }
+.singleNews{
+    margin-top: 10px;
+
+}
 .comment-form{
     margin-top:10px;
 }
@@ -44,4 +48,12 @@ h5{
 }
 .post-input{
     margin-bottom: 20px;
+}
+#profileImg{
+    transition: .5s ease ;
+}
+#profileImg:hover{
+    width: 400px;
+    height: 400px;
+
 }

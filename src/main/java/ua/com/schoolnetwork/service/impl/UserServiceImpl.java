@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * Created by ваня on 05.02.2017.
  */
-@Service("userDetailsService")
+@Service
 public class UserServiceImpl implements UserService,UserDetailsService{
 
     @Autowired
@@ -122,5 +122,10 @@ public class UserServiceImpl implements UserService,UserDetailsService{
         User user = userDao.findOne(userPricipal);
         user.getFriends().add(userDao.findOne(userId));
         userDao.save(user);
+    }
+
+    @Override
+    public List<User> findAllWithOutPrincipal(int id) {
+        return userDao.findAllWithOutPrincpal(id);
     }
 }

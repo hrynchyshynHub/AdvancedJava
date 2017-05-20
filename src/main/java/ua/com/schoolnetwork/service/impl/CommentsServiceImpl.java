@@ -6,10 +6,13 @@ import org.springframework.transaction.annotation.Transactional;
 import ua.com.schoolnetwork.dao.CommentsDao;
 import ua.com.schoolnetwork.dao.UserDao;
 import ua.com.schoolnetwork.dao.UserEventDao;
+import ua.com.schoolnetwork.dto.CommentsDto;
+import ua.com.schoolnetwork.dto.DtoUtilMapper;
 import ua.com.schoolnetwork.entity.Comments;
 import ua.com.schoolnetwork.entity.User;
 import ua.com.schoolnetwork.service.interfaces.CommentService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -41,15 +44,25 @@ public class CommentsServiceImpl implements CommentService {
 
     @Transactional
     @Override
-    public void save(Comments comments, int idUser) {
+    public void save(CommentsDto commentsDto, int idUser) {
+        Comments comments = commentsDtoToComments(commentsDto);
         commentsDao.saveAndFlush(comments);
         User user = userDao.findOne(idUser);
         comments.setUser(user);
-
+        comments.setLocalDate(LocalDate.now());
+        commentsDao.save(comments);
     }
 
     @Override
     public List<Comments> findCommentsForEvent(int idEvent) {
         return commentsDao.findComentsForEvent(idEvent);
+    }
+
+    @Override
+    public Comments commentsDtoToComments(CommentsDto commentsDto){
+        Comments comments = new Comments();
+        comments.setUserEvent(userEventDao.findOne(commentsDto.getUserEventId()));
+        comments.setComment(commentsDto.getComment());
+        return comments;
     }
 }

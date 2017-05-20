@@ -4,8 +4,10 @@ import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import ua.com.schoolnetwork.dao.CommentsDao;
 import ua.com.schoolnetwork.dao.UserDao;
 import ua.com.schoolnetwork.dao.UserEventDao;
+import ua.com.schoolnetwork.entity.Comments;
 import ua.com.schoolnetwork.entity.User;
 import ua.com.schoolnetwork.entity.UserEvent;
 import ua.com.schoolnetwork.service.interfaces.UserEventService;
@@ -24,6 +26,8 @@ public class UserEventServiceImpl implements UserEventService {
     private UserEventDao userEventDao;
     @Autowired
     private UserDao userDao;
+    @Autowired
+    private CommentsDao commentsDao;
 
 
     @Override
@@ -38,10 +42,16 @@ public class UserEventServiceImpl implements UserEventService {
 
     @Override
     public void delete(int userEventId) {
+        List<Comments> commentses = commentsDao.findComentsForEvent(userEventId);
+        for (Comments comments : commentses) {
+            comments.setUserEvent(null);
+            comments.setUser(null);
+            commentsDao.delete(comments);
+        }
         UserEvent userEvent = userEventDao.getOne(userEventId);
         userEvent.setUser(null);
         userEventDao.delete(userEventId);
-    }
+}
 
     @Override
     public List<UserEvent> findAll() {

@@ -16,4 +16,6 @@ public interface UserDao extends JpaRepository<User,Integer> {
     boolean userExistsByEmail(@Param("email") String email);
     @Query("select u from User u left join fetch u.friends where u.id =:id")
     List<User> findUserFriends(@Param("id") int userId);
+    @Query("select u from User u where not u.id=:id")
+    List<User>findAllWithOutPrincpal(@Param("id") int id);
 }

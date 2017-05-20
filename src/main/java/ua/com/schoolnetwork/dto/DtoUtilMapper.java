@@ -1,5 +1,7 @@
 package ua.com.schoolnetwork.dto;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import ua.com.schoolnetwork.dao.UserEventDao;
 import ua.com.schoolnetwork.entity.Comments;
 import ua.com.schoolnetwork.entity.Message;
 import ua.com.schoolnetwork.entity.User;
@@ -9,6 +11,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 public class DtoUtilMapper {
+
 
     public static List<UserDto> userToUserDto(List<User> users){
         List<UserDto> userDtos = new ArrayList<UserDto>();
@@ -28,14 +31,16 @@ public class DtoUtilMapper {
     public static List<UserEventDto> userEventToUserEventsDto(List<UserEvent>userEvents){
         List<UserEventDto> userEventDtos = new ArrayList<UserEventDto>();
         for (UserEvent userEvent:userEvents){
-            UserEventDto userEventDto = new UserEventDto(userEvent.getId(),userEvent.getDescription(),userEvent.getLocalDate(),userEvent.getLikeCounter(),userEvent.getUser().getFirstName(), userEvent.getUser().getSecondName(),userEvent.getPathToImage());
+            UserEventDto userEventDto = new UserEventDto(userEvent.getId(),userEvent.getDescription(),userEvent.getLocalDate(),userEvent.getLikeCounter(),userEvent.getUser().getFirstName(), userEvent.getUser().getSecondName(),
+                    userEvent.getUser().getPathToImage());
             userEventDtos.add(userEventDto);
         }
         return userEventDtos;
 
     }
     public static UserEventDto userEventToUserEventDto(UserEvent userEvent){
-        UserEventDto userEventDto =  new UserEventDto(userEvent.getId(),userEvent.getDescription(),userEvent.getLocalDate(),userEvent.getLikeCounter(),userEvent.getUser().getFirstName(), userEvent.getUser().getSecondName(),userEvent.getPathToImage());
+        UserEventDto userEventDto =  new UserEventDto(userEvent.getId(),userEvent.getDescription(),userEvent.getLocalDate(),userEvent.getLikeCounter(),userEvent.getUser().getFirstName(), userEvent.getUser().getSecondName(),
+                userEvent.getUser().getPathToImage());
         return userEventDto;
     }
     public static List<CommentsDto> commentsToComentsDto(List<Comments> commentses){
@@ -65,5 +70,6 @@ public class DtoUtilMapper {
         }
         return messageDtos;
     }
+
 
 }
